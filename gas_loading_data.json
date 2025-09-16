@@ -1,0 +1,75 @@
+{
+  "bays": {
+    "1": {},
+    "2": {},
+    "3": {},
+    "4": {}
+  },
+  "completed": [
+    {
+      "carrier_name": "",
+      "license_front": "",
+      "license_rear": "",
+      "truck_type": "Semi-Trailer",
+      "shift": "A",
+      "order_no": "",
+      "customer_name": "",
+      "load_qty": "",
+      "checker_name": "",
+      "admin_saved_time": "2025-09-17 00:25:01",
+      "bay_number": "3",
+      "completed_time": "2025-09-17T00:25:13.879194"
+    },
+    {
+      "parking_stop_timestamp": "2025-09-17 00:24:54",
+      "bay_number": "2",
+      "completed_time": "2025-09-17T01:01:02.413342"
+    },
+    {
+      "truck_on_bay_timestamp": "2025-09-17 00:21:23",
+      "parking_stop_timestamp": "2025-09-17 00:21:25",
+      "safety_setup_timestamp": "2025-09-17 00:21:25",
+      "check_ground_tare_timestamp": "2025-09-17 00:58:48",
+      "open_vent_timestamp": "2025-09-17 01:00:39",
+      "bay_number": "4",
+      "completed_time": "2025-09-17T01:02:56.444312"
+    },
+    {
+      "truck_on_bay_timestamp": "2025-09-17 00:58:24",
+      "parking_stop_timestamp": "2025-09-17 01:02:51",
+      "carrier_name": "หฟดฟ",
+      "license_front": "ฟหดฟหด",
+      "bay_number": "1",
+      "completed_time": "2025-09-17T01:05:03.248278"
+    },
+    {
+      "carrier_name": "ห",
+      "truck_on_bay_timestamp": "2025-09-17 01:08:03",
+      "parking_stop_timestamp": "2025-09-17 01:08:09",
+      "bay_number": "1",
+      "completed_time": "2025-09-17T01:08:11.157407"
+    },
+    {
+      "instruction_sheet_ton": "หกด",
+      "bay_number": "1",
+      "completed_time": "2025-09-17T01:08:25.943962"
+    },
+    {
+      "truck_type": "10 wheel truck",
+      "license_front": "ฟหกด",
+      "bay_number": "2",
+      "completed_time": "2025-09-17T02:18:25.263779"
+    },
+    {
+      "parking_stop_timestamp": "2025-09-17 01:08:07",
+      "weight_checker": "s",
+      "bay_number": "3",
+      "completed_time": "2025-09-17T02:18:46.792187"
+    },
+    {
+      "weight_checker": "s",
+      "bay_number": "2",
+      "completed_time": "2025-09-17T02:18:50.584442"
+    }
+  ]
+}
