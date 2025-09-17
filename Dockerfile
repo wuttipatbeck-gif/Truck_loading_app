@@ -1,25 +1,21 @@
 # ใช้ base image ที่เป็น Python 3.10
 FROM python:3.10-slim
 
-# เพิ่ม repositories ที่จำเป็นและติดตั้ง system dependencies
-RUN echo "deb http://deb.debian.org/debian/ bullseye main non-free contrib" >> /etc/apt/sources.list \
-    && echo "deb http://deb.debian.org/debian/ bullseye-updates main non-free contrib" >> /etc/apt/sources.list \
-    && echo "deb http://security.debian.org/debian-security bullseye-security/updates main non-free contrib" >> /etc/apt/sources.list \
-    && apt-get update \
-    && apt-get install -y libmpv1
+# ติดตั้ง system dependencies ที่จำเป็นสำหรับ Flet รวมถึงไลบรารี GStreamer
+RUN apt-get update && apt-get install -y libmpv1 libgstreamer-plugins-base1.0-0 libgstreamer1.0-0
 
 # กำหนด working directory
 WORKDIR /usr/src/app
 
-# Copy ไฟล์ requirements.txt และติดตั้ง Python dependencies
+# Copy requirements.txt และติดตั้ง dependencies
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy ไฟล์โปรเจกต์ทั้งหมด
 COPY . .
 
-# กำหนด port ที่ Flet จะใช้
+# กำหนด port
 EXPOSE 8000
 
-# กำหนดคำสั่งเริ่มต้นสำหรับรันแอปพลิเคชัน
+# กำหนดคำสั่งรันแอปพลิเคชัน
 CMD ["flet", "run", "--host", "0.0.0.0", "app.py"]
