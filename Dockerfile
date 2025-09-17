@@ -1,4 +1,4 @@
-# ใช้ Ubuntu 22.04 ซึ่งเป็น Base Image ที่เสถียร
+# ใช้ Base Image ที่เป็น Ubuntu 22.04 ซึ่งเสถียร
 FROM ubuntu:22.04
 
 # ตั้งค่า noninteractive เพื่อป้องกันข้อผิดพลาดในการติดตั้ง
