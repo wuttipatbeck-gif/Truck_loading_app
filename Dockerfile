@@ -1,7 +1,7 @@
-# ใช้ base image ที่เป็น Python 3.10
-FROM python:3.10-slim
+# ใช้ base image ที่เป็น Python 3.10 บน Debian Bullseye
+FROM python:3.10-bullseye
 
-# อัปเดต package list และติดตั้ง dependencies ที่จำเป็นทั้งหมด
+# ติดตั้ง system dependencies ที่จำเป็นทั้งหมดสำหรับ Flet
 RUN apt-get update && apt-get install -y \
     libmpv1 \
     libgstreamer-plugins-base1.0-0 \
