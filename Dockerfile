@@ -1,8 +1,11 @@
 # ใช้ base image ที่เป็น Python 3.10
 FROM python:3.10-slim
 
-# ติดตั้ง system dependencies ที่จำเป็นสำหรับ Flet รวมถึงไลบรารี GStreamer
-RUN apt-get update && apt-get install -y libmpv1 libgstreamer-plugins-base1.0-0 libgstreamer1.0-0
+# อัปเดต package list และติดตั้ง dependencies ที่จำเป็นทั้งหมด
+RUN apt-get update && apt-get install -y \
+    libmpv1 \
+    libgstreamer-plugins-base1.0-0 \
+    libgstreamer1.0-0
 
 # กำหนด working directory
 WORKDIR /usr/src/app
