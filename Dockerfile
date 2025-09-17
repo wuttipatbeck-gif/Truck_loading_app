@@ -1,13 +1,17 @@
 # ใช้ base image ที่เป็น Python 3.10
 FROM python:3.10-slim
 
-# ติดตั้ง system dependency ที่จำเป็น (libmpv1)
-RUN apt-get update && apt-get install -y libmpv1
+# เพิ่ม repositories ที่จำเป็นและติดตั้ง system dependencies
+RUN echo "deb http://deb.debian.org/debian/ bullseye main non-free contrib" >> /etc/apt/sources.list \
+    && echo "deb http://deb.debian.org/debian/ bullseye-updates main non-free contrib" >> /etc/apt/sources.list \
+    && echo "deb http://security.debian.org/debian-security bullseye-security/updates main non-free contrib" >> /etc/apt/sources.list \
+    && apt-get update \
+    && apt-get install -y libmpv1
 
 # กำหนด working directory
 WORKDIR /usr/src/app
 
-# Copy ไฟล์ requirements.txt และติดตั้ง dependencies ของ Python
+# Copy ไฟล์ requirements.txt และติดตั้ง Python dependencies
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
